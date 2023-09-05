@@ -4,9 +4,9 @@
 }
 
 body{
-    background-image: url(/resources/img/sakura.gif);
-    background-repeat: no-repeat;
-    background-size: 100%;
+    /* background-image: url(/resources/img/sakura.gif); */
+    /* background-repeat: no-repeat; */
+    /* background-size: 100%; */
 }
 
 .wrapper{
@@ -150,7 +150,7 @@ body{
     border-radius: 20px;
 }
 
-#video_background {
+#image_background {
     position: absolute;
     bottom: 0px;    
     /* right: 0px;     */
