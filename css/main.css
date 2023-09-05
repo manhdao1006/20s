@@ -4,7 +4,7 @@
 }
 
 body{
-    background-image: url(/resources/img/meadow.jpg);
+    background-image: url(/resources/img/sakura.gif);
     background-repeat: no-repeat;
     background-size: 100%;
 }
@@ -13,8 +13,10 @@ body{
     position: relative;
 }
 
-.block_start, .block_key{
-    margin: 10% auto;
+.block_start, 
+.block_key, 
+.block_intro_gift_B{
+    margin: 20% auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,19 +28,69 @@ body{
     cursor: pointer;
     visibility: visible;
     position: absolute;
-    top: 5%;
     left: 50%;
     transform: translate(-50%, -50%);
     background: linear-gradient(skyblue, tomato);
     border-radius: 10px;
     padding: 20px;
-    transition: 2s;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
 }
 
 .block_key{
     visibility: hidden;
     z-index: 2;
-    transition: 3s;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.block_intro_gift_B{
+    visibility: hidden;
+    position: absolute;
+    z-index: 3;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main_intro{
+    border-radius: 20px;
+    background: #2DEB39;
+    padding: 30px;
+    width: 330px;
+}
+
+.block_word{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    /* align-content: center; */
+}
+
+.block_word > .word_B{
+    width: 15%;
+    font-weight: 700;
+    font-size: 70px;
+    cursor: pointer;
+}
+
+.block_word > .minus_word_B{
+    width: 30%;
+    font-size: 30px;
+}
+
+.block_word > .minus_word_B > i{
+    font-weight: 700;
+}
+
+.block_word > .define_B{
+    text-align: left;
+    width: 30%;
+    font-weight: 700;
+    font-size: 30px;
 }
 
 .main_key{
@@ -47,27 +99,30 @@ body{
     padding: 30px;
 }
 
-.title_key{
+.title_key, 
+.title_intro{
     font-size: 25px;
     color: black;
     font-weight: 600;
     margin-bottom: 25px;
     display: flex;
 }
-.title_key > .come_back{
+.title_key > .come_back_start, 
+.title_intro > .come_back_key{
     width: 10%;
     cursor: pointer;
-    color: #13C8E8;
+    color: tomato;
 } 
 
-.title_key > .main_title{
+.title_key > .heading_key, 
+.title_intro > .heading_intro_B{
     width: 90%;
     justify-content: center;
     text-align: center;
     align-content: center;
 }
 
-.title_key > .main_title #hint_key{
+.title_key > .heading_key #hint_key{
     color: #0AD15A;
     cursor: pointer;
 }
@@ -76,7 +131,6 @@ body{
     font-size: 20px;
     margin-bottom: 25px;
     color: black;
-
 }
 
 .number{

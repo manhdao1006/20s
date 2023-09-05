@@ -12,19 +12,22 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-    <!-- <video id="video_background" preload="auto" autoplay="true" loop="loop" volume="50">        
-        <source src="resources/video/Lauv - Steal The Show (From -Elemental-).mp4" type="video/mp4"/>            
-    </video> -->
+    <video style="visibility: hidden;" id="video_background" preload="auto" autoplay="true" loop="loop" volume="50">
+        <source src="resources/video/Moon Shower.mp4" type="video/mp4"/>            
+    </video>
     <audio autoplay loop>
         <source src="resources/audio/Lauv - Steal The Show (From -Elemental-).mp3" type="audio/mpeg"/>
     </audio>
     <div class="wrapper">
+        <!-- page start -->
         <div id="start" class="block_start">Bắt đầu nha!</div>
+
+        <!-- page key -->
         <div id="key" class="block_key">
             <div class="main_key">
                 <div class="title_key">
-                    <div id="back" class="come_back"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i></div>
-                    <div class="main_title">Hallo <i id="hint_key">DON10</i></div>
+                    <div id="back_start" class="come_back_start"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i></div>
+                    <div class="heading_key">Hallo <i id="hint_key">DON10</i></div>
                 </div>
                 <div class="content_key"><i>Nhập mật khẩu đã nha!!! (6 chữ số)</i></div>
                 <div class="number_key">
@@ -38,6 +41,26 @@
                 <button class="btn_go" id="go" type="button" >GO!</button>
             </div>
         </div>
+
+        <!-- page intro B -->
+        <div id="intro_gift_B" class="block_intro_gift_B">
+            <div class="main_intro">
+                <div class="title_intro">
+                    <div id="back_key" class="come_back_key"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i></div>
+                    <div class="heading_intro_B">Đầu tiên, đó là chữ</div>
+                </div>
+                <div class="block_word">
+                    <div id="word" class="word_B">B</div>
+                    <div id="minus" class="minus_word_B"><i class="fa fa-minus" aria-hidden="true"></i></div>
+                    <div id="define" class="define_B">
+                        <div>Best</div>
+                        <div>Beside</div>
+                    </div>                
+                </div>
+            </div>            
+        </div>
+
+        <!-- page intro F -->
     </div>
 </body>
 </html>
