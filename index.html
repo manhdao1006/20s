@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy!</title>
+    <!-- <link rel="stylesheet" type="text/css" href="/gridsystem.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <video id="video_background" preload="auto" autoplay="true" loop="loop" volume="50">        
+        <source src="resources/video/Lauv - Steal The Show (From -Elemental-).mp4" type="video/mp4"/>            
+    </video>
+    <!-- <audio src="Lauv - Steal The Show (From -Elemental-).mp3" autoplay loop></audio> -->
+    <div class="wrapper">
+        <div id="start" class="block_start">Bắt đầu nha!</div>
+        <div id="key" class="block_key">
+            <div class="main_key">
+                <div class="title_key">
+                    <div id="back" class="come_back"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i></div>
+                    <div class="main_title">Hallo <i id="hint_key">DON10</i></div>
+                </div>
+                <div class="content_key"><i>Nhập mật khẩu đã nha!!! (6 chữ số)</i></div>
+                <div class="number_key">
+                    <input class="number" id="key_number_1" type="text" maxlength="1" pattern="[0-9]{1}" autofocus/>
+                    <input class="number" id="key_number_2" type="text" maxlength="1" pattern="[0-9]{1}" />
+                    <input class="number" id="key_number_3" type="text" maxlength="1" pattern="[0-9]{1}" />
+                    <input class="number" id="key_number_4" type="text" maxlength="1" pattern="[0-9]{1}" />
+                    <input class="number" id="key_number_5" type="text" maxlength="1" pattern="[0-9]{1}" />
+                    <input class="number" id="key_number_6" type="text" maxlength="1" pattern="[0-9]{1}" />
+                </div>
+                <button class="btn_go" id="go" type="button" >GO!</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script type="text/javascript" src="js/script.js"></script>
