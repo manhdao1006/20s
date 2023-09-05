@@ -3,6 +3,12 @@
     margin: 0;
 }
 
+body{
+    background-image: url(/resources/img/meadow.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
 .wrapper{
     position: relative;
 }
