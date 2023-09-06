@@ -26,7 +26,7 @@ body{
 .block_start{
     z-index: 1;
     cursor: pointer;
-    visibility: hidden;
+    visibility: visible;
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -47,7 +47,7 @@ body{
 }
 
 .block_intro_gift_B{
-    visibility: visible;
+    visibility: hidden;
     position: absolute;
     z-index: 3;
     top: 20%;
