@@ -10,6 +10,7 @@ document.getElementById("start").onclick = ()=>{
     document.getElementById("start").style.visibility = "hidden";
     // document.getElementById("start").style.transform
     document.getElementById("key").style.visibility = "visible";
+    // document.getElementById("audio").onplay;
 }
 
 // key->start
@@ -49,6 +50,10 @@ document.getElementById("go").onclick = function(){
         // key->B
         document.getElementById("key").style.visibility="hidden";
         document.getElementById("intro_gift_B").style.visibility="visible";
+    } else if(key_number_1.value == "" || key_number_2.value == ""
+        || key_number_3.value == "" || key_number_4.value == ""
+        || key_number_5.value == "" || key_number_6.value == ""){
+        window.alert("Phải nhập mật khẩu đã nha");
     } else {
         window.alert("Sai rùiii\nPassword từ diu mà ra đó, quên rồi hả");
         key_number_1.value = "";
@@ -58,4 +63,5 @@ document.getElementById("go").onclick = function(){
         key_number_5.value = "";
         key_number_6.value = "";
     }
+    
 }

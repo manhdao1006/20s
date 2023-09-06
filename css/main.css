@@ -26,7 +26,7 @@ body{
 .block_start{
     z-index: 1;
     cursor: pointer;
-    visibility: visible;
+    visibility: hidden;
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -47,7 +47,7 @@ body{
 }
 
 .block_intro_gift_B{
-    visibility: hidden;
+    visibility: visible;
     position: absolute;
     z-index: 3;
     top: 20%;
@@ -63,7 +63,7 @@ body{
 }
 
 .block_word{
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     text-align: center;
     align-items: center;
@@ -71,6 +71,21 @@ body{
 }
 
 .block_word > .word_B{
+    font-size: 100px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.block_word > .minus_word_B{
+    visibility: hidden;
+    display: none;
+}
+
+.block_word > .define_B{
+    visibility: hidden;
+    display: none;
+}
+/* .block_word > .word_B{
     width: 15%;
     font-weight: 700;
     font-size: 70px;
@@ -91,7 +106,7 @@ body{
     width: 30%;
     font-weight: 700;
     font-size: 30px;
-}
+} */
 
 .main_key{
     background: white;
