@@ -6,17 +6,23 @@ var key_number_5 = document.getElementById("key_number_5");
 var key_number_6 = document.getElementById("key_number_6");
 // script change page
 // start->key
-document.getElementById("start").onclick = ()=>{
+document.getElementById("audio").onplay = ()=>{
+    document.getElementById("cloud").style.visibility = "hidden";
     document.getElementById("start").style.visibility = "hidden";
-    // document.getElementById("start").style.transform
     document.getElementById("key").style.visibility = "visible";
-    // document.getElementById("audio").onplay;
+
 }
 
-// key->start
-document.getElementById("back_start").onclick = ()=>{
+// key->restart
+document.getElementById("back_restart").onclick = ()=>{
     document.getElementById("key").style.visibility="hidden";
-    document.getElementById("start").style.visibility="visible";
+    document.getElementById("restart").style.visibility="visible";
+}
+
+// restart->key
+document.getElementById("restart").onclick = ()=>{
+    document.getElementById("restart").style.visibility="hidden";
+    document.getElementById("key").style.visibility="visible";
 }
 
 // B->key
@@ -34,16 +40,16 @@ document.getElementById("back_key").onclick = ()=>{
 
 // hint key
 var check = false;
-document.getElementById("hint_key").onclick = function(){
+document.getElementById("hint_key").onclick = ()=>{
     check = true;
     if(check == true){
-        window.alert("DON10\nMật khẩu này chắc cũng chỉ diu với tui biết thôi đó");
+        window.alert("\n\nDON10\n\nMật khẩu này chắc cũng chỉ diu với tui biết thôi đó");
     }
 }
 
 
 // check key
-document.getElementById("go").onclick = function(){
+document.getElementById("go").onclick = ()=>{
     if(key_number_1.value == "3" && key_number_2.value == "0"
         && key_number_3.value == "6" && key_number_4.value == "6"
         && key_number_5.value == "1" && key_number_6.value == "0"){
@@ -53,9 +59,9 @@ document.getElementById("go").onclick = function(){
     } else if(key_number_1.value == "" || key_number_2.value == ""
         || key_number_3.value == "" || key_number_4.value == ""
         || key_number_5.value == "" || key_number_6.value == ""){
-        window.alert("Phải nhập mật khẩu đã nha");
+        window.alert("\n\nDON10\n\nPhải nhập mật khẩu đã nha");
     } else {
-        window.alert("Sai rùiii\nPassword từ diu mà ra đó, quên rồi hả");
+        window.alert("\n\nDON10\n\nSai rùiii\nPassword từ diu mà ra đó, quên rồi hả");
         key_number_1.value = "";
         key_number_2.value = "";
         key_number_3.value = "";

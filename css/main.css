@@ -13,10 +13,18 @@ body{
     position: relative;
 }
 
+.image_cloud{
+    z-index: 2;
+    position: absolute;
+    width: 20%;
+    left: 38%;
+    transform: translate(-50%, 75%);
+}
+
 .block_start, 
+.block_restart, 
 .block_key, 
 .block_intro_gift_B{
-    margin: 20% auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,9 +32,25 @@ body{
 }
 
 .block_start{
+    margin: 25% auto;
     z-index: 1;
-    cursor: pointer;
     visibility: visible;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10%;
+}
+
+.block_start > #audio{
+    background: linear-gradient(skyblue, tomato);
+    height: 55px;
+}
+
+.block_restart{
+    margin: 25% auto;
+    z-index: 2;
+    cursor: pointer;
+    visibility: hidden;
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -39,18 +63,19 @@ body{
 }
 
 .block_key{
+    margin: 25% auto;
     visibility: hidden;
-    z-index: 2;
+    z-index: 3;
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
 .block_intro_gift_B{
+    margin: 25% auto;
     visibility: hidden;
     position: absolute;
-    z-index: 3;
-    top: 20%;
+    z-index: 4;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -122,12 +147,19 @@ body{
     margin-bottom: 25px;
     display: flex;
 }
-.title_key > .come_back_start, 
+.title_key > .come_back_restart, 
 .title_intro > .come_back_key{
     width: 10%;
+    height: 40px;
     cursor: pointer;
     color: tomato;
-} 
+}
+
+.title_key > .come_back_restart:hover, 
+.title_intro > .come_back_key:hover{
+    font-size: 30px;
+    transition: 0.3s;
+}
 
 .title_key > .heading_key, 
 .title_intro > .heading_intro_B{
