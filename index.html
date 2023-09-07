@@ -14,24 +14,25 @@
 </head>
 <body>
     <div><img id="image_background" alt="" src="resources/img/sakura.gif"/></div>
-    <!-- <video style="visibility: hidden;" preload="auto" autoplay="true" loop="loop" volume="50">
-        <source src="resources/video/Moon Shower.mp4" type="video/mp4"/>            
-    </video> -->
-    <!-- <audio style="visibility: visible;" id="audio" preload="auto" autoplay controls loop>
-        <source src="resources/audio/Lauv - Steal The Show From -Elemental-.mp3" type="audio/mpeg"/>
-    </audio> -->
     <div class="wrapper">        
 
         <!-- page start -->
         <img id="cloud" class="image_cloud" alt="" src="resources/img/cloud.png"/>
         <div id="start" class="block_start">
-            <audio id="audio" controls loop >
+            <audio id="audio" controls loop autoplay>
                 <source src="resources/audio/Lauv - Steal The Show From -Elemental-.mp3" type="audio/mpeg"/>
             </audio>
         </div>
 
         <!-- page restart -->
         <div id="restart" class="block_restart">Lại nàooo!</div>
+
+        <!-- page preface -->
+        <div id="preface" class="block_preface">
+            <img alt="" src="resources/img/note.jpg"/>
+            Thật ra là tau muốn viết nhiều hơn nhưng nếu viết ở giấy thì cũng là viết ở giấy nên là chuyển qua đây :))
+            <div id="next_key" class="come_next_key"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></div>
+        </div>
 
         <!-- page key -->
         <div id="key" class="block_key">
@@ -42,36 +43,55 @@
                 </div>
                 <div class="content_key"><i>Nhập mật khẩu đã nha!!! (6 chữ số)</i></div>
                 <div class="number_key">
-                    <input class="number" id="key_number_1" type="text" maxlength="1" pattern="[0-9]{1}" autofocus/>
-                    <input class="number" id="key_number_2" type="text" maxlength="1" pattern="[0-9]{1}" autofocus/>
-                    <input class="number" id="key_number_3" type="text" maxlength="1" pattern="[0-9]{1}" autofocus/>
-                    <input class="number" id="key_number_4" type="text" maxlength="1" pattern="[0-9]{1}" autofocus />
-                    <input class="number" id="key_number_5" type="text" maxlength="1" pattern="[0-9]{1}" autofocus/>
-                    <input class="number" id="key_number_6" type="text" maxlength="1" pattern="[0-9]{1}" autofocus />
+                    <input class="number" id="key_number_1" type="text" maxlength="1" pattern="[0-9]{1}" />
+                    <input class="number" id="key_number_2" type="text" maxlength="1" pattern="[0-9]{1}" />
+                    <input class="number" id="key_number_3" type="text" maxlength="1" pattern="[0-9]{1}" />
+                    <input class="number" id="key_number_4" type="text" maxlength="1" pattern="[0-9]{1}" />
+                    <input class="number" id="key_number_5" type="text" maxlength="1" pattern="[0-9]{1}" />
+                    <input class="number" id="key_number_6" type="text" maxlength="1" pattern="[0-9]{1}" />
                 </div>
                 <button class="btn_go" id="go" type="button" >GO!</button>
             </div>
         </div>
 
-        <!-- page intro B -->
-        <div id="intro_gift_B" class="block_intro_gift_B">
-            <div class="main_intro">
-                <div class="title_intro">
+        <!-- page intro -->
+        <div id="intro" class="block_intro">
+            Không biết Don có bất ngờ và nhớ về mật khẩu không nhưng "điều này" tau vẫn nhớ, đơn giản là nó không quên ấy chứ không phải là cố nhớ. (Còn tên "Don" là do chưa có nói thuiii).<br>Tiếp theo là 2 từ khóa với 2 đoạn thư.<br>Từ đầu tiên nha ...
+            <div id="next_content_B" class="come_next_content_B"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></div>
+        </div>
+
+        <!-- page content B -->
+        <div id="content_gift_B" class="block_content_gift_B">
+            <div class="main_content">
+                <div class="title_content">
                     <div id="back_key" class="come_back_key"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i></div>
-                    <div class="heading_intro_B">Đầu tiên, đó là chữ</div>
+                    <div id="show_letter" class="block_word">
+                        <div onmouseover="showWord(event)" id="word">
+                            <div class="hide_word_B">B</div>
+                            <i id="up_here" style="font-size: 10px;" class="fa fa-chevron-circle-up"></i>
+                            <div id="here" style="font-size: 10px;">here</div>
+                        </div>
+                        <div id="minus" class="hide_minus_word_B">
+                            <div>
+                                <i class="fa fa-minus" aria-hidden="true"></i>
+                                <p id="wait" style="font-size: 10px;">click và chờ 2s nha<p>
+                            </div>
+                        </div>
+                        <div id="define" class="hide_define_B">
+                            <div>Best</div>
+                            <div>Beside</div>
+                        </div> 
+                    </div>
+                    <div id="next_word_F" class="come_next_word_F">
+                        <i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
+                        <p style="font-size: 10px;">đọc xong đã rồi tiếp tục nha</p>
+                    </div>
                 </div>
-                <div class="block_word">
-                    <div id="word" class="word_B">B</div>
-                    <div id="minus" class="minus_word_B"><i class="fa fa-minus" aria-hidden="true"></i></div>
-                    <div id="define" class="define_B">
-                        <div>Best</div>
-                        <div>Beside</div>
-                    </div>                
-                </div>
+                <div id="letter_B" class="hide_letter_content_B">20 tuổi rùi, cũng không biết nói gì hơn, chúc Don "vui". Hy vọng Don sẽ hạnh phúc ở thì hiện tại và thì tương lai. Gặp chuyện gì quá buồn thì phải nói ra đó. "Mong rằng trên đường đi đến mục tiêu của Don có khó khăn hay thuận lợi thì vẫn sẽ luôn có ít nhất một người ủng hộ Don ha" (mặc dù là đôi khi Don cũng không cần lắm :3). Chúc Don mọi điều tốt nhất luôn ở bên cạnh.<br><br>Tiếp tục từ khóa thứ 2 nha...</div>
             </div>            
         </div>
 
-        <!-- page intro F -->
+        <!-- page content F -->
     </div>
 </body>
 </html>
