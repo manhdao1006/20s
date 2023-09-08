@@ -35,10 +35,12 @@ document.getElementById("restart").onclick = ()=>{
 document.getElementById("next_content_B").onclick = ()=>{
     document.getElementById("intro").style.visibility = "hidden";
     document.getElementById("content_gift_B").style.visibility = "visible";
+    document.getElementById("main_word_B").style.visibility = "visible";
 }
 
 // B->key
 document.getElementById("back_key").onclick = ()=>{
+    document.getElementById("main_word_B").style.visibility = "hidden";
     document.getElementById("content_gift_B").style.visibility = "hidden";
     document.getElementById("key").style.visibility = "visible";
     key_number_1.value = "";
@@ -51,12 +53,20 @@ document.getElementById("back_key").onclick = ()=>{
 
 
 // hint key
-var check = false;
-document.getElementById("hint_key").onclick = ()=>{
-    check = true;
-    if(check == true){
-        window.alert("\n\nDON10\n\nMật khẩu này chắc cũng chỉ diu với tui biết thôi đó");
-    }
+// var check = false;
+// document.getElementById("hint_key").onclick = ()=>{
+//     check = true;
+//     if(check == true){
+//         window.alert("\n\nDON10\n\nMật khẩu này chắc cũng chỉ diu với tui biết thôi đó");
+//     }
+// }
+
+document.getElementById("hint_key").onmouseover = ()=>{
+    document.getElementById("img_hint").style.visibility = "visible";
+}
+
+document.getElementById("hint_key").onmouseout = ()=>{
+    document.getElementById("img_hint").style.visibility = "hidden";
 }
 
 

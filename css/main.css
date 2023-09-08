@@ -105,19 +105,35 @@
 }
 
 .block_content_gift_B{
-    margin: 25% auto;
     visibility: hidden;
+    margin: 25% auto;
     position: absolute;
     z-index: 5;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 50%);
+}
+
+.bg_word_b{
+    margin: 25% auto;
+    position: absolute;
+    z-index: 4;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.bg_word_b > img{
+    border-radius: 25px;
 }
 
 .main_content{
     border-radius: 20px;
-    background: #2DEB39;
     padding: 30px;
     width: 650px;
+    visibility: hidden;
+    position: absolute;
+    z-index: 5;
+    left: 50%;
+    transform: translate(-50%, -10%);
 }
 
 .block_word{
@@ -125,6 +141,8 @@
     justify-content: center;
     width: 90%;
     cursor: pointer;
+    color: #00DB7C;
+    text-shadow: 0 0 25px #00E2F5;
 }
 
 /* an define */
@@ -215,6 +233,13 @@
     cursor: pointer;
 }
 
+.title_key > #img_hint{
+    visibility: hidden;
+    position: absolute;
+    width: 90%;
+    left: 74%;
+    top: -70%;
+}
 .content_key{
     font-size: 20px;
     margin-bottom: 25px;
