@@ -51,6 +51,22 @@ document.getElementById("back_key").onclick = ()=>{
     key_number_6.value = "";
 }
 
+// B->F
+document.getElementById("next_word_F").onclick = ()=>{
+    document.getElementById("main_word_B").style.visibility = "hidden";
+    document.getElementById("content_gift_B").style.visibility = "hidden";
+    document.getElementById("main_word_F").style.visibility = "visible";
+    document.getElementById("content_gift_F").style.visibility = "visible";
+}
+
+// F->B
+document.getElementById("back_word_B").onclick = ()=>{
+    document.getElementById("main_word_F").style.visibility = "hidden";
+    document.getElementById("content_gift_F").style.visibility = "hidden";
+    document.getElementById("main_word_B").style.visibility = "visible";
+    document.getElementById("content_gift_B").style.visibility = "visible";
+}
+
 
 // hint key
 // var check = false;
@@ -95,33 +111,65 @@ document.getElementById("go").onclick = ()=>{
 }
 
 // show word B
-document.getElementById("word").addEventListener("mouseover", showWord);
+document.getElementById("word_B").addEventListener("mouseover", showWord_B);
 
-function showWord(event){
-    document.getElementById("up_here").style.display = "none";
-    document.getElementById("here").style.display = "none";
+function showWord_B(event){
+    document.getElementById("up_here_B").style.display = "none";
+    document.getElementById("here_B").style.display = "none";
     event.target.classList.remove("hide_word_B");
-    document.getElementById("minus").classList.remove("hide_minus_word_B");
-    document.getElementById("define").classList.remove("hide_define_B");
+    document.getElementById("minus_B").classList.remove("hide_minus_word_B");
+    document.getElementById("define_B").classList.remove("hide_define_B");
     event.target.classList.add("show_word_B");
-    document.getElementById("minus").classList.add("show_minus_word_B");
-    document.getElementById("define").classList.add("show_define_B");
+    document.getElementById("minus_B").classList.add("show_minus_word_B");
+    document.getElementById("define_B").classList.add("show_define_B");
+}
+
+// show word F
+document.getElementById("word_F").addEventListener("mouseover", showWord_F);
+
+function showWord_F(event){
+    document.getElementById("up_here_F").style.display = "none";
+    document.getElementById("here_F").style.display = "none";
+    event.target.classList.remove("hide_word_F");
+    document.getElementById("minus_F").classList.remove("hide_minus_word_F");
+    document.getElementById("define_F").classList.remove("hide_define_F");
+    event.target.classList.add("show_word_F");
+    document.getElementById("minus_F").classList.add("show_minus_word_F");
+    document.getElementById("define_F").classList.add("show_define_F");
 }
 
 // show letter B
 var letter_B = document.getElementById("letter_B");
-var originContent = letter_B.innerHTML;
-var index = 1;
+var originContent_B = letter_B.innerHTML;
+var index_B = 1;
 
-document.getElementById("show_letter").onclick = ()=>{
-    letter_B.innerHTML = originContent.slice(0, 1);
-    document.getElementById("wait").style.display = "none";
-    document.getElementById("show_letter").style.cursor = "auto";
-    document.getElementById("word").style.cursor = "auto"
+document.getElementById("show_letter_B").onclick = ()=>{
+    letter_B.innerHTML = originContent_B.slice(0, 1);
+    document.getElementById("wait_B").style.display = "none";
+    document.getElementById("show_letter_B").style.cursor = "auto";
+    document.getElementById("word_B").style.cursor = "auto"
     letter_B.classList.remove("hide_letter_content_B");
     letter_B.classList.add("show_letter_content_B");
     setInterval(()=>{
-        index++;
-        letter_B.innerHTML = originContent.slice(0, index);
+        index_B++;
+        letter_B.innerHTML = originContent_B.slice(0, index_B);
+    }, 106)
+}
+
+// show letter F
+var letter_F = document.getElementById("letter_F");
+var originContent_F = letter_F.innerHTML;
+var index_F = 1;
+
+document.getElementById("show_letter_F").onclick = ()=>{
+    letter_F.innerHTML = originContent_F.slice(0, 1);
+    document.getElementById("wait_F").style.display = "none";
+    document.getElementById("show_letter_F").style.cursor = "auto";
+    document.getElementById("word_F").style.cursor = "auto"
+    letter_F.classList.remove("hide_letter_content_F");
+    letter_F.classList.add("show_letter_content_F");
+    setInterval(()=>{
+        index_F++;
+        letter_F.innerHTML = originContent_F.slice(0, index_F);
     }, 106)
 }
