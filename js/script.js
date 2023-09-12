@@ -173,3 +173,30 @@ document.getElementById("show_letter_F").onclick = ()=>{
         letter_F.innerHTML = originContent_F.slice(0, index_F);
     }, 106)
 }
+
+// show end
+var word_end = document.getElementById("word_end");
+var originContent_end = word_end.innerHTML;
+var index_end = 0;
+var isForward = true;
+
+document.getElementById("next_end").onclick = ()=>{
+    word_end.innerHTML = originContent_end.slice(0, 1);
+    document.getElementById("main_word_F").style.visibility = "hidden";
+    document.getElementById("content_gift_F").style.visibility = "hidden";
+    document.getElementById("end").style.visibility = "visible";
+    setInterval(()=>{
+        if(isForward){
+            index_end++;
+            if(index_end >= originContent_end.length){
+                isForward = false;
+            }
+        } else{
+            index_end--;
+            if(index_end <= 0){
+                isForward = true;
+            }
+        }
+        word_end.innerHTML = originContent_end.slice(0, index_end);
+    }, 200)
+}
