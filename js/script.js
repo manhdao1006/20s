@@ -79,6 +79,7 @@ document.getElementById("back_word_B").onclick = ()=>{
 
 document.getElementById("hint_key").onmouseover = ()=>{
     document.getElementById("img_hint").style.visibility = "visible";
+    document.getElementById("img_hint").style.transition = "1s";
 }
 
 document.getElementById("hint_key").onmouseout = ()=>{
@@ -87,27 +88,53 @@ document.getElementById("hint_key").onmouseout = ()=>{
 
 
 // check key
+var isClick = true;
 document.getElementById("go").onclick = ()=>{
-    if(key_number_1.value == "3" && key_number_2.value == "0"
-        && key_number_3.value == "6" && key_number_4.value == "6"
-        && key_number_5.value == "1" && key_number_6.value == "0"){
-        // key->intro
-        document.getElementById("key").style.visibility="hidden";
-        document.getElementById("intro").style.visibility="visible";
-    } else if(key_number_1.value == "" || key_number_2.value == ""
-        || key_number_3.value == "" || key_number_4.value == ""
-        || key_number_5.value == "" || key_number_6.value == ""){
-        window.alert("\n\nDON10\n\nPhải nhập mật khẩu đã nha");
-    } else {
-        window.alert("\n\nDON10\n\nSai rùiii\nPassword từ diu mà ra đó, quên rồi hả");
-        key_number_1.value = "";
-        key_number_2.value = "";
-        key_number_3.value = "";
-        key_number_4.value = "";
-        key_number_5.value = "";
-        key_number_6.value = "";
+    if(isClick){
+        if(key_number_1.value == "3" && key_number_2.value == "0"
+            && key_number_3.value == "6" && key_number_4.value == "6"
+            && key_number_5.value == "1" && key_number_6.value == "0"){
+            // key->intro
+            document.getElementById("key").style.visibility="hidden";
+            document.getElementById("intro").style.visibility="visible";
+            isClick = false;
+        } else if(key_number_1.value == "" || key_number_2.value == ""
+            || key_number_3.value == "" || key_number_4.value == ""
+            || key_number_5.value == "" || key_number_6.value == ""){
+            window.alert("\n\nDON10\n\nPhải nhập mật khẩu đã nha");
+            isClick = true;
+        } else {
+            window.alert("\n\nDON10\n\nSai rùiii\nPassword từ diu mà ra đó, quên rồi hả");
+            key_number_1.value = "";
+            key_number_2.value = "";
+            key_number_3.value = "";
+            key_number_4.value = "";
+            key_number_5.value = "";
+            key_number_6.value = "";
+            isClick = true;
+        }
+    } else{
+        if(key_number_1.value == "3" && key_number_2.value == "0"
+            && key_number_3.value == "6" && key_number_4.value == "6"
+            && key_number_5.value == "1" && key_number_6.value == "0"){
+            // key->B
+            document.getElementById("key").style.visibility = "hidden";
+            document.getElementById("content_gift_B").style.visibility = "visible";
+            document.getElementById("main_word_B").style.visibility = "visible";
+        } else if(key_number_1.value == "" || key_number_2.value == ""
+            || key_number_3.value == "" || key_number_4.value == ""
+            || key_number_5.value == "" || key_number_6.value == ""){
+            window.alert("\n\nDON10\n\nPhải nhập mật khẩu đã nha");
+        } else {
+            window.alert("\n\nDON10\n\nSai rùiii\nPassword từ diu mà ra đó, quên rồi hả");
+            key_number_1.value = "";
+            key_number_2.value = "";
+            key_number_3.value = "";
+            key_number_4.value = "";
+            key_number_5.value = "";
+            key_number_6.value = "";
+        }
     }
-    
 }
 
 // show word B
@@ -153,7 +180,7 @@ document.getElementById("show_letter_B").onclick = ()=>{
     setInterval(()=>{
         index_B++;
         letter_B.innerHTML = originContent_B.slice(0, index_B);
-    }, 106)
+    }, 60)
 }
 
 // show letter F
@@ -171,7 +198,7 @@ document.getElementById("show_letter_F").onclick = ()=>{
     setInterval(()=>{
         index_F++;
         letter_F.innerHTML = originContent_F.slice(0, index_F);
-    }, 106)
+    }, 60)
 }
 
 // show end
