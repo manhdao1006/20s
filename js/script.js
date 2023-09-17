@@ -9,6 +9,8 @@ var key_number_6 = document.getElementById("key_number_6");
 document.getElementById("audio").onplay = ()=>{
     document.getElementById("cloud").style.visibility = "hidden";
     document.getElementById("start").style.visibility = "hidden";
+    document.getElementById("preface_image").classList.add("show_preface_image");
+    document.getElementById("preface_span").classList.add("show_preface_span");
     document.getElementById("preface").style.visibility = "visible";
 }
 
@@ -57,6 +59,7 @@ document.getElementById("next_word_F").onclick = ()=>{
     document.getElementById("content_gift_B").style.visibility = "hidden";
     document.getElementById("main_word_F").style.visibility = "visible";
     document.getElementById("content_gift_F").style.visibility = "visible";
+    document.getElementById("key").style.visibility = "hidden";
 }
 
 // F->B
@@ -95,7 +98,9 @@ document.getElementById("go").onclick = ()=>{
             && key_number_3.value == "6" && key_number_4.value == "6"
             && key_number_5.value == "1" && key_number_6.value == "0"){
             // key->intro
-            document.getElementById("key").style.visibility="hidden";
+            document.getElementById("key").classList.remove("show_block_key");
+            document.getElementById("key").classList.add("hide_block_key");
+            document.getElementById("intro").classList.add("show_block_intro");
             document.getElementById("intro").style.visibility="visible";
             isClick = false;
         } else if(key_number_1.value == "" || key_number_2.value == ""

@@ -69,14 +69,17 @@
     transform: translate(-50%, -50%);
 }
 
-.block_preface > img{
+.block_preface > #preface_image{
     height: 150px;
     position: absolute;
     width: 100%;
     border-radius: 55px;
     z-index: -1;
+}
+
+.show_preface_image{
     animation-name: show_preface_image;
-    animation-duration: 5s;
+    animation-duration: 2s;
 }
 
 @keyframes show_preface_image {
@@ -88,14 +91,17 @@
     }
 }
 
-.block_preface > span{
+.block_preface > #preface_span{
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
     color: #12A2FF;
     opacity: 100%;
+}
+
+.show_preface_span{
     animation-name: show_preface_span;
-    animation-duration: 10s;
+    animation-duration: 6s;
 }
 
 @keyframes show_preface_span {
@@ -119,7 +125,7 @@
 
 .show_block_key{
     animation-name: show_key;
-    animation-duration: 13s;
+    animation-duration: 6s;
 }
 
 @keyframes show_key {
@@ -128,6 +134,20 @@
     }
     to{
         opacity: 100%;
+    }
+}
+
+.hide_block_key{
+    animation-name: hide_key;
+    animation-duration: 5s;
+}
+
+@keyframes hide_key {
+    from{
+        opacity: 100%;
+    }
+    to{
+        opacity: 0%;
     }
 }
 
@@ -149,6 +169,21 @@
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
     color: black;
+    opacity: 100%;
+}
+
+.show_block_intro{
+    animation-name: show_intro;
+    animation-duration: 6s;
+}
+
+@keyframes show_intro {
+    from{
+        opacity: 0%;
+    }
+    to{
+        opacity: 100%;
+    }
 }
 
 .block_intro > img{
