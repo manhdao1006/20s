@@ -10,13 +10,13 @@ document.getElementById("audio").onplay = ()=>{
     document.getElementById("cloud").style.visibility = "hidden";
     document.getElementById("start").style.visibility = "hidden";
     document.getElementById("preface").style.visibility = "visible";
-
 }
 
 // preface-> key
 document.getElementById("next_key").onclick = ()=>{
     document.getElementById("preface").style.visibility = "hidden";
     document.getElementById("key").style.visibility = "visible";
+    document.getElementById("key").classList.add("show_block_key");
 }
 
 // key->restart
@@ -101,7 +101,7 @@ document.getElementById("go").onclick = ()=>{
         } else if(key_number_1.value == "" || key_number_2.value == ""
             || key_number_3.value == "" || key_number_4.value == ""
             || key_number_5.value == "" || key_number_6.value == ""){
-            window.alert("\n\nDON10\n\nPhải nhập mật khẩu đã nha");
+            window.alert("\n\nDON10\n\nPhải nhập mật khẩu đã nha, không được để trống đâu đó");
             isClick = true;
         } else {
             window.alert("\n\nDON10\n\nSai rùiii\nPassword từ diu mà ra đó, quên rồi hả");
